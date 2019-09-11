@@ -6,15 +6,15 @@ v-app
       v-list.pa-0.dignity
         v-list-tile(avatar)
           v-list-tile-avatar
-            v-icon.mr-0(large) fa-gears
+            v-icon.mr-0(large) waves
           v-list-tile-content.ml-0
             v-list-tile-title.title
               | Engenhoca Carioca
 
     v-divider
 
-    v-list.dignity(style='overflow: hidden; margin-top: 60px;')
-    v-list-tile(active.sync='', v-for='(item, i) in items', :key='item.title', :to="item.to" @click='drawer = false' active-class="blue-grey lighten-3 white--text" exact)
+    v-list(style='overflow: hidden; margin-top: 60px;')
+    v-list-tile(active.sync='', v-for='(item, i) in items', :key='item.title', :to="item.to" @click='drawer = false' active-class="active" exact)
         v-list-tile-action
           v-icon(style='color: initial') {{ item.icon }}
 
@@ -29,10 +29,11 @@ v-app
 
     router-link(to="/codex" style="text-decoration: none;")
       v-btn(icon='', @click.stop='clipped = !clipped', href='/')
-        v-icon free_breakfast
+        v-icon.mr-0 free_breakfast
 
-    v-btn(icon='', @click.stop='fixed = !fixed', href='/codex')
-      v-icon.mr-1(large) fa-gears
+    v-btn(flat @click.stop='fixed = !fixed', href='/codex')
+      v-icon.mr-1(large) all_inclusive
+
     v-toolbar-title.ml-0.dignity(v-text='title')
 
     v-spacer
@@ -129,9 +130,20 @@ export default {
 </script>
 
 <style>
+body {
+	font-family: "News Cycle", sans-serif;
+	font-weight: 300;
+	font-style: normal !important;
+}
+
 blockquote {
   width: 350px;
   margin: 0 auto;
   text-align: center  ;
 }
+
+v-list-tile {
+	font-family: "News Cycle", sans-serif;
+}
+
 </style>
