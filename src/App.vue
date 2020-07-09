@@ -14,7 +14,7 @@ v-app
 		v-divider
 
 		v-list(style='overflow: hidden; margin-top: 60px;')
-		v-list-tile(active.sync v-for='(item, i) in items', :key='item.title', :to="item.to" @click='drawer = false' active-class="blue-grey lighten-5" exact dense)
+		v-list-tile(active.sync v-for='(item, i) in items', :key='item.title', :to="item.to" @click='drawer = false' active-class="blue-grey lighten-3" exact dense)
 				v-list-tile-action
 					v-icon(style='color: initial') {{ item.icon }}
 
@@ -77,19 +77,19 @@ v-app
 				v-list-tile-action
 					v-icon create
 
-				v-list-tile-title Put Tooltips Here
+				v-list-tile-title Tack Tooltips Here
 
 			v-list-tile(to='/quarto')
 				v-list-tile-action
 					v-icon waves
 
-				v-list-tile-title What is This Drawer For?
+				v-list-tile-title Whatever Is This Drawer For?
 
 			v-list-tile(@click='right = !right' to='/tabloid')
 				v-list-tile-action
 					v-icon local_dining
 
-				v-list-tile-title Perhaps Not a Menu
+				v-list-tile-title Endless Options
 
 	v-footer.hidden-md-and-down(:fixed='fixed', app='')
 		span.ml-3.dignity
