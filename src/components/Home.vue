@@ -2,12 +2,13 @@
 	//- v-container(grid-list-xl text-xs-center)
 	//- v-slide-y-transition(mode='out-in')
 	//- v-layout(row wrap)
+v-layout
 	.hero-image
 		.hero-text
 			h1 
 				i.material-icons.md-72 all_inclusive
 			h1.h1 Printed With Precision
-			h2.h2.mb-3 Newspaer and Magazine Formats 
+			h2.h2.mb-3 Newspaper and Magazine Formats 
 			v-btn.v-btn-lg(color="blue-grey" dark large to="/broadsheet") Imprints
 			v-btn.v-btn-lg(color="secondary" dark large to="/berliner") Offprints
 			//- v-flex
@@ -64,7 +65,7 @@ body, html {
     background-size: cover;
 	position: relative;
 	filter: grayscale(100%) opacity(125%);
-}
+}	
 
 /* Place text in the middle of the image */
 .hero-text {
